@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.SetingsActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:paddingTop="40px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/set_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/set_item_p"
+                android:paddingRight="@dimen/set_item_p">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/set_pass_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_item_h">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@mipmap/new_you_jiantou_icon"
+                        android:text="密码管理"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="3px"
+                        android:layout_alignParentBottom="true"></include>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_item_h">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="手机号"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+
+                    <TextView
+                        android:id="@+id/set_userPhone_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="3px"
+                        android:layout_alignParentBottom="true">
+
+                    </include>
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_item_h">
+
+                    <TextView
+                        android:id="@+id/messge_tixin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="消息提醒"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/set_business_SB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:padding="10px"
+                        app:kswBackDrawable="@drawable/miui_back_drawable"
+                        app:kswBackMeasureRatio="2"
+                        app:kswThumbDrawable="@drawable/miui_thumb_drawable"
+                        app:kswThumbHeight="34px"
+                        app:kswThumbWidth="34px" />
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+            <View
+                android:id="@+id/set_line_v"
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:layout_below="@+id/set_top_layout"
+                android:background="#e9e9e9">
+
+            </View>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/set_line_v"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/set_item_p"
+                android:paddingRight="@dimen/set_item_p">
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/set_service_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_item_h">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="客服热线"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="4008-119-789"
+                        android:drawablePadding="20px"
+                        android:drawableRight="@mipmap/new_you_jiantou_icon"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="3px"
+                        android:layout_alignParentBottom="true">
+
+                    </include>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/set_guanyu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_item_h">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@mipmap/new_you_jiantou_icon"
+                        android:text="关于我们"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="3px"
+                        android:layout_alignParentBottom="true">
+
+                    </include>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/set_version_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_item_h">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="检查版本更新"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize"/>
+
+                    <TextView
+                        android:id="@+id/set_version_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/new_you_jiantou_icon"
+                        android:text="1.1.1"
+                        android:drawablePadding="20px"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="3px"
+                        android:layout_alignParentBottom="true">
+
+                    </include>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <Button
+                    android:id="@+id/logoutlogin_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    android:text="注销"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize"
+                    android:background="@drawable/select_button_login"/>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressbar_set"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:padding="@dimen/login_pro_paddin"
+            android:layout_below="@+id/title_bar" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

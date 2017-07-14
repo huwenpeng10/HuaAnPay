@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.WalletActivity">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/wallet_toplayout"
+            android:layout_width="match_parent"
+            android:layout_height="540px"
+            android:background="@mipmap/zhexiantu_bg">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/wallet_titlebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/title_bar_h"
+                    android:layout_marginTop="40px"
+                    android:background="@null">
+
+
+                    <ImageView
+                        android:id="@+id/left_Imagemage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15px"
+                        android:padding="20px"
+                        android:src="@mipmap/new_left_icon" />
+
+                    <TextView
+                        android:id="@+id/title_bar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="主页"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/titlebar_textsize" />
+
+                    <TextView
+                        android:id="@+id/right_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="清算记录"
+                        android:layout_marginRight="20px"
+                        android:textSize="28px"
+                        android:textColor="#f3f9fd"/>
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/wallet_toplayout_bottom"
+                android:layout_below="@+id/wallet_titlebar">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/amount_tv"
+                    android:layout_centerHorizontal="true"
+                    android:text="总资产(元)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:id="@+id/amount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/user_amounttext_size" />
+
+
+                <ProgressBar
+                    android:id="@+id/wallet_pro1"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/wallet_toplayout_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ProgressBar
+                        android:id="@+id/wallet_pro2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_above="@+id/zuori_text"
+                        android:padding="10px"/>
+                    <TextView
+                        android:id="@+id/day_shouyi_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/zuori_text"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10px"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/all_maxtextsize" />
+
+
+                    <TextView
+                        android:id="@+id/zuori_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20px"
+                        android:text="上次收益"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/all_textsize" />
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ProgressBar
+                        android:id="@+id/wallet_pro3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_above="@+id/gongshouyi_text"
+                        android:padding="10px"/>
+
+                    <TextView
+                        android:id="@+id/gongshoiyi_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/gongshouyi_text"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10px"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/all_maxtextsize" />
+
+
+                    <TextView
+                        android:id="@+id/gongshouyi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20px"
+                        android:text="共收益"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/all_textsize" />
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/wallet_layout_bottom"
+            android:background="@color/white"
+            android:layout_below="@+id/wallet_toplayout">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/wallet_pro_title"
+                android:layout_width="match_parent"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"
+                android:layout_height="100px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:layout_centerVertical="true"
+                    android:text="状态"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="收益"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text_color"
+                    android:layout_centerVertical="true"
+                    android:text="日期"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:background="@mipmap/hengxian_icon"
+                    android:layout_alignParentBottom="true">
+
+                </View>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/wallet_pro_title">
+
+                <ProgressBar
+                    android:id="@+id/wallet_pro4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:padding="@dimen/login_pro_paddin"/>
+
+
+                <com.itheima.pulltorefreshlib.PullToRefreshListView
+                    android:id="@+id/wallet_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/list_line">
+
+                </com.itheima.pulltorefreshlib.PullToRefreshListView>
+
+                <include
+                    android:id="@+id/list_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="5px"
+                    layout="@layout/zhuye_henline"
+                    android:layout_alignParentBottom="true">
+                </include>
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/wallet_layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/wallet_replenishing_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="充值"
+                android:background="@color/text_bluecolor"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_maxtextsize" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@mipmap/new_dengku_shuxian"></View>
+
+
+            <TextView
+                android:id="@+id/wallet_withdrawals_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="提现"
+                android:background="@color/text_bluecolor"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_maxtextsize" />
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

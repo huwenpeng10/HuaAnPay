@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.ReplenishingActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"></com.example.mrxu.myviews.EleMentTitle>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/repl_top_layout"
+                android:layout_width="680px"
+                android:layout_height="200px"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40px"
+                android:background="@mipmap/new_replence_top">
+
+                <TextView
+                    android:id="@+id/repl_username_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/new_shoukuan_yonghu_bth"
+                    android:drawablePadding="@dimen/replen_textpadding"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/replen_textpadding"
+                    android:text="用户"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:id="@+id/repl_bankName_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="招商银行"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/replen_textsize" />
+
+                <TextView
+                    android:id="@+id/repl_bankNum_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/repl_bankName_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15px"
+                    android:text="6214830119630886"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <ImageView
+                    android:id="@+id/authState_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="@dimen/replen_margin"
+                    android:layout_marginTop="@dimen/replen_margin"
+                    android:background="@mipmap/new_zhanghuxinxi_renzheng_img" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/repl_money_tv_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/repl_top_layout">
+
+
+                <EditText
+                    android:id="@+id/repl_money_dt"
+                    android:layout_width="250px"
+                    android:layout_height="@dimen/all_edittext_h"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawableBottom="@mipmap/hengxian_icon"
+                    android:gravity="center"
+                    android:hint="金额"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/input_kuang_hint_color"
+                    android:textSize="@dimen/replen_money_textsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/repl_money_dt"
+                    android:layout_alignBottom="@+id/repl_money_dt"
+                    android:layout_marginLeft="@dimen/replen_margin"
+                    android:layout_toRightOf="@+id/repl_money_dt"
+                    android:text="元"
+                    android:textSize="@dimen/all_textsize" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/repl_money_tv_layout">
+
+
+                <Button
+                    android:id="@+id/next_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/replen_margin"
+                    android:layout_marginRight="@dimen/replen_margin"
+                    android:background="@drawable/select_button_login"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <Button
+                    android:id="@+id/urgent_withdrawals_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_button_login"
+                    android:text="加急提现"
+                    android:layout_marginRight="@dimen/replen_margin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize"
+                    android:layout_below="@+id/next_but"
+                    android:layout_marginTop="20px"
+                    android:layout_alignLeft="@+id/next_but"
+                    android:layout_alignStart="@+id/next_but" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

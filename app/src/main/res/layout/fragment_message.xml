@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.fragment.MessageFragment">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/titlebar_color">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40px"
+                android:layout_height="@dimen/title_bar_h"
+                android:background="@color/titlebar_color">
+
+
+                <ImageView
+                    android:id="@+id/left_Imagemage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15px"
+                    android:visibility="gone"
+                    android:src="@mipmap/new_left_icon" />
+
+                <TextView
+                    android:id="@+id/title_bar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff"
+                    android:text="消息通知"
+                    android:textSize="@dimen/titlebar_textsize" />
+
+                <ImageView
+                    android:id="@+id/right_Imagemage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/new_left_icon"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+
+
+
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+</FrameLayout>

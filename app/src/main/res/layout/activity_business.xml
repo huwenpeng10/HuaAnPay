@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.BusinessActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <com.example.mrxu.myviews.EleMentTitle
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </com.example.mrxu.myviews.EleMentTitle>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_bar"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <WebView
+                android:id="@+id/web_tn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </WebView>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/autoRelativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/tnstate_topbg_color"
+                    android:padding="20px"
+                    android:text="已经认真阅读以上说明"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_textsize" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/textView"
+                    android:orientation="vertical">
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:id="@+id/autoRelativeLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/textView"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/business_state_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:padding="20px"
+                            android:text=""
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/all_maxtextsize" />
+
+
+                        <com.kyleduo.switchbutton.SwitchButton
+                            android:id="@+id/business_SB"
+                            style="@style/SwitchButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            app:kswBackDrawable="@drawable/miui_back_drawable"
+                            app:kswBackMeasureRatio="2"
+                            app:kswThumbDrawable="@drawable/miui_thumb_drawable"
+                            app:kswThumbHeight="34px"
+                            app:kswThumbWidth="34px" />
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/business_t1state_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:padding="20px"
+                            android:text=""
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/all_maxtextsize" />
+
+
+                        <com.kyleduo.switchbutton.SwitchButton
+                            android:id="@+id/business_t1SB"
+                            style="@style/SwitchButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            app:kswBackDrawable="@drawable/miui_back_drawable"
+                            app:kswBackMeasureRatio="2"
+                            app:kswThumbDrawable="@drawable/miui_thumb_drawable"
+                            app:kswThumbHeight="34px"
+                            app:kswThumbWidth="34px" />
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/autoRelativeLayout2">
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+        <ProgressBar
+            android:id="@+id/business_pro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:padding="@dimen/login_pro_paddin"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>

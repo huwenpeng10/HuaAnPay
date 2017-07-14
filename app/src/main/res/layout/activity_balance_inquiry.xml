@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.BalanceInquiryActivity">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#b5e2ff"
+                android:gravity="center">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="520px"
+                    android:layout_height="260px"
+                    android:background="@mipmap/new_shuakazhifu_02_img">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/commit_toplayout_leftmargin"
+                        android:layout_marginTop="30px"
+                        android:text="*支持所有银联标准卡"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/all_textsize" />
+
+                    <TextView
+                        android:id="@+id/commit_bankName_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/all_maxtextsize" />
+
+                    <TextView
+                        android:id="@+id/commit_cardNum_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="25px"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/all_maxtextsize" />
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/zhuye_henline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px">
+
+                </include>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200px">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50px"
+                        android:text="查询结果"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/all_textsize" />
+
+                    <TextView
+                        android:id="@+id/yuantext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/balace_marginleft"
+                        android:layout_marginRight="@dimen/balace_marginright"
+                        android:text="元"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/all_textsize"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/balace_money_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/yuantext"
+                        android:text=""
+                        android:textSize="@dimen/all_maxtextsize" />
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <include
+                    layout="@layout/zhuye_henline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px">
+
+                </include>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="200px"
+                    android:paddingRight="200px">
+
+                    <EditText
+                        android:id="@+id/balance_pass_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/all_edittext_h"
+                        android:background="@null"
+                        android:drawableBottom="@mipmap/hengxian_icon"
+                        android:gravity="center"
+                        android:hint="请输入银行卡密码"
+                        android:maxLength="6"
+                        android:inputType="numberPassword"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/text_color"
+                        android:textSize="@dimen/all_maxtextsize" />
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/error_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="50px"
+                    android:text="注意：服务器每天查询次数有限，如果造成查询失败的情况，请谅解！"
+                    android:textColor="#ff490c"
+                    android:textSize="@dimen/all_textsize" />
+
+                <Button
+                    android:id="@+id/balaceinquiry_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/balace_butmarginleft"
+                    android:layout_marginRight="@dimen/balace_butmarginleft"
+                    android:background="@drawable/select_button_login"
+                    android:text="查询"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize"
+                    android:visibility="gone" />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/balace_pro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:background="#00000000"
+            android:padding="@dimen/login_pro_paddin"
+            android:visibility="gone" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>

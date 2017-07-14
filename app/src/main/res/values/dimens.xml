@@ -1,0 +1,75 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="titlebar_textsize">35px</dimen>
+    <dimen name="all_textsize">25px</dimen>
+    <dimen name="user_textsize">30px</dimen>
+    <dimen name="title_bar_h">100px</dimen>
+    <dimen name="all_maxtextsize">35px</dimen>
+    <dimen name="item_textsize">45px</dimen>
+    <dimen name="commit_moneytextsize">55px</dimen>
+    <dimen name="user_amounttext_size">55px</dimen>
+    <dimen name="all_edittext_h">100px</dimen>
+    <dimen name="resetpassword_edittext_h">80px</dimen>
+    <!-- 所有输入框 hint color -->
+    <color name="input_kuang_hint_color">#55818181</color>
+    <color name="checkkey_color">#FFfc632d</color>
+
+    <dimen name="mian_item_textsize">30px</dimen>
+    <dimen name="mian_shouyi_textsize">50px</dimen>
+    <dimen name="replen_money_textsize">50px</dimen>
+
+    <dimen name="edittext_drawablePadding">40px</dimen>
+    <dimen name="edittext_margin">20px</dimen>
+    <dimen name="textview_drawablePadding">20px</dimen>
+    <dimen name="textview_margin">30px</dimen>
+    <dimen name="paddingLeft">20px</dimen>
+    <dimen name="login_pro_paddin">315px</dimen>
+    <dimen name="login_margin">30px</dimen>
+    <dimen name="zhuye_margin">20px</dimen>
+    <dimen name="replen_margin">20px</dimen>
+    <dimen name="replen_textpadding">20px</dimen>
+    <dimen name="replen_textsize">35px</dimen>
+    <dimen name="bluetooh_margin">20px</dimen>
+    <dimen name="huadongview_textmargin">20px</dimen>
+    <dimen name="huadongview_btnmargin">20px</dimen>
+    <dimen name="huadongview_btnmarginbootm">100px</dimen>
+    <dimen name="huadongview_textsize">25px</dimen>
+    <dimen name="huadongview_textmaxsize">32px</dimen>
+    <dimen name="commit_toplayout_h">100px</dimen>
+    <dimen name="commit_toplayout_leftmargin">20px</dimen>
+    <dimen name="commit_toplayout_margin">50px</dimen>
+    <dimen name="commit_button_margin">100px</dimen>
+    <dimen name="transaction_top_margintop">40px</dimen>
+    <dimen name="transaction_left_margin">20px</dimen>
+    <dimen name="transaction_right_margin">20px</dimen>
+    <dimen name="transaction_top_margin">20px</dimen>
+    <dimen name="transaction_textlayout_h">60px</dimen>
+    <dimen name="signaturetextsize">28px</dimen>
+    <dimen name="balace_marginright">60px</dimen>
+    <dimen name="balace_marginleft">20px</dimen>
+    <dimen name="balace_butmarginleft">20px</dimen>
+    <dimen name="balace_butmarginright">20px</dimen>
+    <dimen name="authentication_layout_padding">50px</dimen>
+    <dimen name="authentication_layout_margintop">50px</dimen>
+
+
+    <dimen name="record_item_dp">20px</dimen>
+    <dimen name="record_item_margin">20px</dimen>
+    <dimen name="set_item_h">100px</dimen>
+    <dimen name="set_item_m">20px</dimen>
+    <dimen name="set_item_p">20px</dimen>
+
+
+
+    <dimen name="input_sides">20px</dimen>
+    <dimen name="input_line_space">20px</dimen>
+    <dimen name="universal_sides">20px</dimen>
+    <dimen name="universal_line_space">20px</dimen>
+    <dimen name="universal_top">40px</dimen>
+
+
+
+</resources>

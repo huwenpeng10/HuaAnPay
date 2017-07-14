@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.UrgentWithdrawalsActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/repl_top_layout"
+                android:layout_width="680px"
+                android:layout_height="200px"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40px"
+                android:background="@mipmap/new_replence_top">
+
+                <TextView
+                    android:id="@+id/repl_username_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/new_shoukuan_yonghu_bth"
+                    android:drawablePadding="@dimen/replen_textpadding"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/replen_textpadding"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:id="@+id/repl_bankName_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/replen_textsize" />
+
+                <TextView
+                    android:id="@+id/repl_bankNum_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/repl_bankName_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15px"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <ImageView
+                    android:id="@+id/authState_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="@dimen/replen_margin"
+                    android:layout_marginTop="@dimen/replen_margin"
+                    android:background="@mipmap/new_zhanghuxinxi_renzheng_img" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/autoLinearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/repl_top_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:background="@color/tnstate_topbg_color"
+                    android:padding="20px"
+                    android:text="提示"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:padding="20px"
+                    android:text="@string/withdrawals_tips1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:padding="20px"
+                    android:text="@string/withdrawals_tips2"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:padding="20px"
+                    android:text="@string/withdrawals_tips3"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:padding="20px"
+                    android:text="@string/withdrawals_tips4"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_textsize" />
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/autoLinearLayout3"
+                android:padding="20px">
+
+                <Button
+                    android:id="@+id/ungent_withdrawals_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/select_button_login"
+                    android:text="提现"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <ProgressBar
+                android:id="@+id/ungent_withdraw_pro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pro_color_bg"
+                android:padding="@dimen/login_pro_paddin"
+                android:visibility="gone" />
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

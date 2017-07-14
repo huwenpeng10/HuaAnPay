@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="200px"
+        android:layout_height="120px">
+
+
+        <TextView
+            android:id="@+id/face_surface_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:text="￥50"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_maxtextsize" />
+
+        <TextView
+            android:id="@+id/face_actualmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15px"
+            android:text="售价：49.22"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_textsize" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

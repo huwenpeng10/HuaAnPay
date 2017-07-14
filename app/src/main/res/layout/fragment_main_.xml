@@ -1,0 +1,434 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.fragment.Main_Fragment">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/main_layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="350px"
+            android:background="@mipmap/new_logo_bg">
+
+            <TextView
+                android:id="@+id/danqianshebei_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20px"
+                android:gravity="center"
+                android:text="@string/Dqsb"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/all_textsize"
+                android:layout_marginRight="20px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+
+
+            <ImageView
+                android:id="@+id/main_top_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/new_logo" />
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/Main_fragment_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_layout_top"
+            android:layout_marginTop="3px"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                //zuobian
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </include>
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/qiandaibao_layout"
+                        android:background="@drawable/mainfragment_button"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/qiandai_kaitong_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#838b8b8b"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@mipmap/kaitong_min_icon" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:drawableTop="@mipmap/new_zhuye_neirong06_icon"
+                            android:gravity="center_horizontal"
+                            android:text="钱袋宝"
+                            android:textSize="@dimen/mian_item_textsize" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </include>
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+
+                        android:id="@+id/yinhangchaxun_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mainfragment_button"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:drawableTop="@mipmap/new_zhuye_neirong02_icon"
+                            android:gravity="center_horizontal"
+                            android:text="余额查询"
+                            android:textSize="@dimen/mian_item_textsize" />
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+                //zhongjian
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/shuakazhifu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mainfragment_button"
+                    android:layout_weight="1">
+
+                    <include
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        layout="@layout/zhuye_shuline"
+                        android:id="@+id/include">
+
+                    </include>
+
+                    <include
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        layout="@layout/zhuye_henline"
+                        >
+
+                    </include>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableTop="@mipmap/new_zhuye_neirong01_icon"
+                        android:gravity="center_horizontal"
+                        android:text="刷卡支付"
+                        android:textSize="35px" />
+
+                    <include
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        layout="@layout/zhuye_shuline"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true">
+
+                    </include>
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                //youbian
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/zhuye_henline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></include>
+
+                        <com.zhy.autolayout.AutoRelativeLayout
+                            android:id="@+id/zhuanzhang_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/mainfragment_button"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:id="@+id/zhuanzhang_kaitong_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#838b8b8b"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:background="@mipmap/kaitong_min_icon" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:drawableTop="@mipmap/new_zhuye_neirong09_icon"
+                                android:gravity="center_horizontal"
+                                android:text="转账"
+                                android:textSize="@dimen/mian_item_textsize" />
+
+
+                        </com.zhy.autolayout.AutoRelativeLayout>
+
+                        <include
+                            layout="@layout/zhuye_henline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></include>
+
+                        <com.zhy.autolayout.AutoRelativeLayout
+
+                            android:id="@+id/shoujichongzhi_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/mainfragment_button"
+                            android:layout_weight="1">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:drawableTop="@mipmap/new_zhuye_neirong03_icon"
+                                android:gravity="center_horizontal"
+                                android:text="手机充值"
+                                android:textSize="@dimen/mian_item_textsize" />
+
+
+                        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/zhuye_bottom_henxian"
+                    layout="@layout/zhuye_henline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></include>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/zhuye_margin"
+                        android:drawableLeft="@mipmap/new_zhuye_qiandan_icon"
+                        android:drawablePadding="@dimen/zhuye_margin"
+                        android:textSize="@dimen/all_textsize"
+                        android:gravity="center_vertical"
+                        android:text="我的钱袋" />
+
+                    <TextView
+                        android:id="@+id/mainfragment_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/all_textsize"
+                        android:layout_marginRight="@dimen/zhuye_margin"
+                        android:text="" />
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/shouyi_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <include
+                        android:id="@+id/zhuye_bottom_henxian"
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </include>
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_above="@+id/look_qiandai_text"
+                        android:layout_alignParentStart="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/shouyi_text"
+                                android:layout_centerHorizontal="true"
+                                android:text="上次收益"
+                                android:textSize="@dimen/all_textsize" />
+
+
+                        <ProgressBar
+                            android:id="@+id/fragment_mainpro"
+                            android:layout_width="40px"
+                            android:layout_height="40px"
+                            android:visibility="gone"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"/>
+
+
+                            <TextView
+                                android:id="@+id/shouyi_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/zhuye_shouyi"
+                                android:textSize="@dimen/mian_shouyi_textsize"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true" />
+
+
+
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/look_qiandai_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="80px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:drawableTop="@mipmap/hengxian_icon"
+                        android:gravity="center"
+                        android:text="点击查看"
+                        android:textSize="@dimen/all_textsize">
+
+
+                    </TextView>
+
+
+                    <RelativeLayout
+                        android:id="@+id/shouyi_kaitong_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#838b8b8b"
+                        android:visibility="gone">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@mipmap/kaitong_icon" />
+
+                    </RelativeLayout>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</FrameLayout>

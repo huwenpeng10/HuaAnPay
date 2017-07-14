@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.PhoneReplenishingActivity">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/white"
+            android:padding="20px">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/autoRelativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/new_chongzhi_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20px"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:text="充话费" />
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true">
+
+                    </include>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/all_edittext_h">
+
+                    <EditText
+                        android:id="@+id/phone_Number_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawableBottom="@mipmap/hengxian_icon"
+                        android:hint="请输入充值手机号"
+                        android:inputType="number"
+                        android:textColorHint="@color/input_kuang_hint_color"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                    
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10px"
+                        android:layout_marginBottom="10px"
+                        android:layout_toLeftOf="@+id/phone_user_IV"
+                        android:background="@mipmap/new_zhuce_shuxian_icon"
+                        android:id="@+id/view">
+
+                    </View>
+
+                    <ImageView
+                        android:id="@+id/phone_user_IV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/new_chongzhi_yonghu"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="10px"/>
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+                <GridView
+                    android:id="@+id/phoneReplenishing_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="16px"
+                    android:gravity="center_horizontal"
+                    android:choiceMode="singleChoice"
+                    android:layout_marginTop="30px"
+                    android:numColumns="3"
+                    android:verticalSpacing="16px">
+
+
+                </GridView>
+
+<!--
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="支付类型"
+                    android:drawablePadding="20px"
+                    android:drawableTop="@mipmap/hengxian_icon"
+                    android:drawableBottom="@mipmap/hengxian_icon"/>
+
+                <RelativeLayout
+                    android:id="@+id/PhoneReplenishing_PayType_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="40px">
+
+                    <TextView
+                        android:layout_width="200px"
+                        android:layout_height="80px"
+                        android:text="快捷支付"
+                        android:gravity="center"
+                        android:background="@color/titlebar_color"
+                        android:id="@+id/payType_kuaijie" />
+
+                    <TextView
+                        android:id="@+id/payType_shuaka"
+                        android:layout_width="200px"
+                        android:layout_height="80px"
+                        android:text="刷卡支付"
+                        android:gravity="center"
+                        android:background="@color/titlebar_color"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/payType_kuaijie"
+                        android:layout_toEndOf="@+id/payType_kuaijie" />
+
+                </RelativeLayout>
+-->
+
+
+
+                <Button
+                    android:id="@+id/phoneReplenishing_commit_but"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_button_login"
+                    android:text="确认提交"
+                    android:layout_marginTop="40px"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize">
+
+                </Button>
+
+
+
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

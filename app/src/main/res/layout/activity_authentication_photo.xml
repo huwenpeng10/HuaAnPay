@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.AuthenticationPhotoActivity">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/commit_but"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="40px">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+
+                android:id="@+id/card_frontphoto_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10px"
+                android:layout_weight="1"
+                android:background="@mipmap/new_shimingrenzheng02_img"
+                android:padding="5px">
+
+
+
+
+                <TextView
+                    android:id="@+id/card_frontphoto_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="20px"
+                    android:drawableTop="@mipmap/new_shimingrenzheng01_img"
+                    android:text="身份证正面照片"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <ImageView
+                    android:id="@+id/card_frontphoto"
+                    android:layout_width="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="match_parent" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+
+                android:id="@+id/card_negativephoto_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="10px"
+                android:layout_weight="1"
+                android:background="@mipmap/new_shimingrenzheng02_img"
+                android:padding="5px">
+
+
+                <TextView
+                    android:id="@+id/card_negativephoto_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="20px"
+                    android:drawableTop="@mipmap/new_shimingrenzheng01_img"
+                    android:text="身份证反面照片"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <ImageView
+                    android:id="@+id/card_negativephoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+
+                android:id="@+id/card_hold_photo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10px"
+                android:layout_weight="1"
+                android:background="@mipmap/new_shimingrenzheng02_img"
+                android:padding="5px">
+
+                <TextView
+                    android:id="@+id/card_hold_photo_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="20px"
+                    android:drawableTop="@mipmap/new_shimingrenzheng01_img"
+                    android:text="手持身份证照片"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <ImageView
+                    android:id="@+id/card_hold_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"/>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <Button
+            android:id="@+id/commit_but"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/authentication_layout_margintop"
+            android:layout_marginLeft="@dimen/authentication_layout_margintop"
+            android:layout_marginRight="@dimen/authentication_layout_margintop"
+            android:background="@drawable/select_button_login"
+            android:text="确认提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_maxtextsize" />
+
+
+        <ProgressBar
+            android:id="@+id/progress_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/pro_color_bg"
+            android:padding="315px"
+            android:visibility="gone" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.TransactionVoucherActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:paddingLeft="100px"
+            android:paddingRight="100px"
+            android:paddingTop="20px">
+
+
+
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/transactionVoucher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/transaction_but"
+                android:layout_marginBottom="@dimen/transaction_top_margintop"
+                android:gravity="center_horizontal">
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/transaction_top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:background="@mipmap/new_jiaoyi_top_bg"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/transaction_top_margintop"
+                        android:text="交易凭证"
+                        android:textSize="@dimen/all_maxtextsize" />
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/transaction_bootm_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/transaction_top_layout"
+                    android:background="@mipmap/new_jiaoyi_bootm_bg"
+                    android:orientation="vertical">
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="用户名称:" />
+
+                        <TextView
+                            android:id="@+id/name_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="张三" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手机号:" />
+
+                        <TextView
+                            android:id="@+id/phoneNumber_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18515332180" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="银行卡号:" />
+
+                        <TextView
+                            android:id="@+id/cardNum_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="622159997827322" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="交易流水号:" />
+
+                        <TextView
+                            android:id="@+id/serial_number_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2019988293891" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="交易参考号" />
+
+                        <TextView
+                            android:id="@+id/refno_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="111000" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="交易时间:" />
+
+                        <TextView
+                            android:id="@+id/time_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2017-5-31  19:31" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="客服电话:" />
+
+                        <TextView
+                            android:id="@+id/services_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="010-234212312" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"></include>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:layout_marginTop="20px"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="交易金额:" />
+
+                        <TextView
+                            android:id="@+id/money_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="50px"
+                            android:gravity="center"
+                            android:text="56元"
+                            android:textSize="@dimen/all_maxtextsize" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/transaction_textlayout_h"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/tramsaction_text_left_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="持卡人签名:" />
+
+
+                        <TextView
+                            android:id="@+id/trantsaction_chongqian_tv"
+                            style="@style/tramsaction_text_right_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="重签"
+                            android:textColor="#58a5ee"
+                            android:visibility="gone" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/transaction_left_margin"
+                        android:paddingRight="@dimen/transaction_right_margin">
+
+                        <ImageView
+                            android:id="@+id/iv_sign"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:scaleType="fitCenter" />
+
+
+                        <TextView
+                            android:id="@+id/resign_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="点击此处签名"
+                            android:textColor="#FFCCCCCC"
+                            android:textSize="@dimen/all_maxtextsize"
+                            android:textStyle="bold" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <Button
+                android:id="@+id/transaction_but"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20px"
+                android:background="@drawable/select_button_login"
+                android:text="提  交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_textsize" />
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/transaction_pro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/login_pro_paddin"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_below="@+id/title_bar" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</LinearLayout>

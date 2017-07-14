@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.WithdrawalsRecordActivity">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+        <ProgressBar
+            android:id="@+id/withdrawals_record_pro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/login_pro_paddin"
+            android:layout_below="@+id/title_bar" />
+
+
+        <com.itheima.pulltorefreshlib.PullToRefreshListView
+            android:id="@+id/withdrawals_record_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+        </com.itheima.pulltorefreshlib.PullToRefreshListView>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+</RelativeLayout>

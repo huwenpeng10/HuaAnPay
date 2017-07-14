@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.SignatureActivity">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/titlebar_color"
+            android:paddingBottom="20px"
+            android:paddingTop="50px">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="为了更好地保证支付的安全性,安子支付特别设置了电子签名验证功能。\n请在下面的空白区域签上您的真实姓名。"
+                android:textColor="@color/white"
+                android:textSize="@dimen/signaturetextsize" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+
+            <com.example.mrxu.myviews.SignatureView
+                android:id="@+id/sv_sign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/autoLinearLayout" />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40px"
+                android:layout_marginRight="50px"
+                android:layout_alignParentRight="true">
+                <Button
+                    android:id="@+id/bt_cancel"
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    android:drawableTop="@mipmap/signaturestar"
+                    android:background="@null"/>
+
+                <Button
+                    android:id="@+id/bt_confirm"
+                    android:layout_width="130px"
+                    android:layout_height="130px"
+                    android:layout_below="@+id/bt_cancel"
+                    android:drawableTop="@mipmap/agress"
+                    android:background="@null"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

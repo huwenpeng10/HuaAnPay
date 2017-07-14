@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.AboutusActivity">
+
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_bar"
+            android:layout_marginTop="@dimen/universal_top"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/universal_sides"
+                        android:layout_marginRight="@dimen/universal_sides"
+                        android:background="@mipmap/bg_title_yellow"
+                        android:gravity="center"
+                        android:text="公司简介"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/line_title_yellow" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/universal_sides"
+                        android:layout_marginRight="@dimen/universal_sides"
+                        android:layout_marginTop="@dimen/universal_line_space"
+                        android:lineSpacingExtra="@dimen/input_line_space"
+                        android:text="@string/company_profile"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/all_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/universal_line_space"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/universal_sides"
+                        android:layout_marginRight="@dimen/universal_sides"
+                        android:background="@mipmap/bg_title_yellow"
+                        android:gravity="center"
+                        android:text="联系我们"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/user_textsize" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/line_title_yellow" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/universal_sides"
+                        android:layout_marginRight="@dimen/universal_sides"
+                        android:layout_marginTop="@dimen/universal_line_space"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/input_line_space"
+                            android:layout_marginTop="@dimen/input_line_space"
+                            android:text="@string/company_name"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/all_textsize"
+                            android:textStyle="bold" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/input_line_space"
+                                android:layout_marginTop="@dimen/input_line_space" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="地址："
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/input_sides"
+                                    android:paddingRight="@dimen/input_sides"
+                                    android:text="@string/company_address"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/input_line_space"
+                                android:layout_marginTop="@dimen/input_line_space" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="电话："
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/input_sides"
+                                    android:paddingRight="@dimen/input_sides" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/company_area_code"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="-"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="left"
+                                        android:text="@string/company_phone1"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/company_phone2"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text="@string/company_phone3"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize" />
+                                </TableRow>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/input_line_space"
+                                android:layout_marginTop="@dimen/input_line_space" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="邮编："
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/input_sides"
+                                    android:paddingRight="@dimen/input_sides"
+                                    android:text="@string/company_postcode"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/input_line_space"
+                                android:layout_marginTop="@dimen/input_line_space" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="传真："
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/input_sides"
+                                    android:paddingRight="@dimen/input_sides" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/company_area_code"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="-"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/company_fax"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/all_textsize" />
+                                </TableRow>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/input_line_space"
+                                android:layout_marginTop="@dimen/input_line_space" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="客服："
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/input_sides"
+                                    android:paddingRight="@dimen/input_sides"
+                                    android:text="@string/services_phone"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/all_textsize" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+</RelativeLayout>

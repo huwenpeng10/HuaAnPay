@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/new_denglu_bg"
+    tools:context="com.example.mrxu.main.LoginActivity">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/new_logo" />
+
+
+        </RelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/et_phoneNumber"
+                style="@style/login_edittext_style"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@mipmap/new_denglu_yonghu_icon"
+                android:hint="@string/phonenumber"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColorHint="@color/white">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/edittext_pass_style"
+                android:layout_alignLeft="@+id/et_phoneNumber"
+                android:layout_alignStart="@+id/et_phoneNumber"
+                android:layout_below="@+id/et_phoneNumber"
+                android:layout_marginTop="40px"
+                android:drawableLeft="@mipmap/new_denglumima_icon"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:textColorHint="@color/white">
+
+            </EditText>
+
+            <Button
+                android:id="@+id/login_but"
+                android:layout_width="600px"
+                android:layout_height="100px"
+                android:layout_alignLeft="@+id/et_password"
+                android:layout_alignStart="@+id/et_password"
+                android:layout_below="@+id/et_password"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/inputtext_kuang"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_maxtextsize" />
+
+            <RelativeLayout
+                android:id="@+id/register_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/login_but"
+                android:padding="30px">
+
+                <TextView
+                    android:id="@+id/register_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/forgotpass_text"
+                    android:layout_centerHorizontal="true"
+                    android:padding="20px"
+                    android:text="@string/register"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/forgotpass_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="20px"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/white" />
+
+
+            </RelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_layout"
+                android:paddingTop="100px">
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pro_color_bg"
+        android:padding="@dimen/login_pro_paddin"
+        android:visibility="gone" />
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

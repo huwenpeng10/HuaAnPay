@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--自定义color-->
+    <color name="titlebar_color">#FF58A6EF</color>
+    <color name="lodingbar_color">#e9db5e</color>
+    <color name="lodingbar_bg_color">#7d464646</color>
+    <color name="edittext_color">#464646</color>
+    <color name="dialog_msg_color">#262626</color>
+    <color name="user_textcolor">#515151</color>
+    <color name="user_linecolor">#e2e2e2</color>
+    <color name="zhuye_shouyi">#FFFF5543</color>
+    <color name="day_shouyi">#FFFF5543</color>
+    <color name="qiandai_shouyi">#ff8843</color>
+    <color name="text_color">#666666</color>
+    <color name="text_color333333">#FF333333</color>
+    <color name="text_bluecolor">#58a5ee</color>
+    <color name="pro_color_bg">#c9505050</color>
+    <color name="pro_color">#3798f4</color>
+    <color name="walletpro_color">#FFa4a4a4</color>
+    <color name="recorditem_top_color">#ceebff</color>
+    <!--item state color-->
+    <color name="state_item_color0">#ff904e</color>
+    <color name="state_item_color1">#44abf1</color>
+    <color name="state_item_color2">#a1a1a1</color>
+    <color name="state_item_color3">#ff904e</color>
+    <color name="state_item_color4">#fb221e</color>
+    <color name="chartview_line_color">#a6a6a6</color>
+    <color name="tnstate_color">#30b314</color>
+    <color name="tnstate_topbg_color">#d3ebfc</color>
+    <color name="commit_with_but_color">#b5e0ff</color>
+    <color name="with_text_bluecolor">#58a5ee</color>
+
+
+</resources>

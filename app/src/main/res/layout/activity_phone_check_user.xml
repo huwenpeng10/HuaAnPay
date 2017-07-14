@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.PhoneCheckUserActivity">
+
+
+
+
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_bar">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:padding="20px">
+
+
+            <TextView
+                android:id="@+id/phonecheck_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/all_textsize"
+                android:textColor="@color/text_color"
+                android:text="验证码已发送至您的手机"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/checkuser_phonecode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/all_edittext_h"
+                android:background="@null"
+                android:drawableBottom="@mipmap/hengxian_icon"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:paddingLeft="20px"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/input_kuang_hint_color"
+                android:textSize="@dimen/all_maxtextsize"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/phonecheck_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:id="@+id/conuntdown_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送验证码"
+                android:textColor="@color/text_bluecolor"
+                android:textSize="@dimen/all_textsize"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/checkuser_phonecode"
+                android:layout_marginTop="20px" />
+
+
+
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/phone_check_pro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/login_pro_paddin"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/white"
+            android:visibility="gone"/>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">华安Pay</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="SelectTheCardReader">请选择刷卡器</string>
+
+    <string name="register">注册</string>
+    <string name="forgot_password">忘记密码?</string>
+    <string name="login">登 录</string>
+    <string name="next">下一步</string>
+    <string name="services_phone">4008-119-789</string>
+
+    <string name="Qpos">蓝牙Qpos</string>
+    <string name="Xdl">新大陆</string>
+    <string name="Dqsb">请选择设备</string>
+
+    <string name="phonenumber">手机号</string>
+    <string name="password">密码</string>
+
+
+    <!--Qpos连接提示-->
+    <string name="con_qpos0">提示</string>
+    <string name="con_qpos1">1.\u0020\u0020连接之前请确保设备主界面为（欢迎使用）界面.</string>
+    <string name="con_qpos2">2.\u0020\u0020请确认蓝牙设备已打开，确保蓝牙在正常连接范围以内.</string>
+    <string name="con_qpos3">3.\u0020\u0020设备电量不足时，蓝牙连接失败.</string>
+    <string name="con_qpos4">4.\u0020\u0020多次连接失败，请尝试重启设备重新连接.</string>
+    <!--Qpos刷卡提示-->
+    <string name="swipe_qpos1">1.\u0020\u0020刷卡时请确认蓝牙设备已连接，磁卡卡面朝上，磁条靠近设备端，平稳匀速刷过，向左或向右刷卡均可.</string>
+    <string name="swipe_qpos2">2.\u0020\u0020若刷卡无反应或提示刷卡失败，请稍作等待重新刷卡即可.</string>
+    <string name="swipe_qpos3">3.\u0020\u0020若多次刷卡仍无反应，请重新连接重试.</string>
+    <string name="swipe_qpos4">4.\u0020\u0020暂不支持无密码交易.</string>
+
+    <string name="swipe_tips1">1.\u0020\u0020刷卡时请保持插针与音频口的固定，磁卡卡面朝上，磁条靠近设备端，平稳匀速刷过，向左或向右刷卡均可.</string>
+    <string name="swipe_tips2">2.\u0020\u0020若刷卡无反应或提示刷卡失败，请稍作等待重新刷卡即可.</string>
+    <string name="swipe_tips3">3.\u0020\u0020若多次刷卡仍无反应，请重新拔插设备或退出程序重试.</string>
+
+    <string name="con_tips1">1.\u0020\u0020请将插针正确插入音频插口，保持插针与音频口的固定.</string>
+    <string name="con_tips2">2.\u0020\u0020请将手机音量调至最大.</string>
+    <string name="con_tips3">3.\u0020\u0020若多次连接失败，请重试.</string>
+
+    <string name="withdrawals_tips1">1.\u0020\u0020加急提现会扣除费率为“0.88/100（元）”</string>
+    <string name="withdrawals_tips2">2.\u0020\u0020单笔提现最低金额是200元</string>
+    <string name="withdrawals_tips3">3.\u0020\u0020如果账户金额不足200元将不予提现</string>
+    <string name="withdrawals_tips4">4.\u0020\u0020加急提现会一次性提现目前账户上的所有金额</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+</resources>

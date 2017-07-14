@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.QPOSCommitActivity">
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/autoRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b5e2ff"
+            android:gravity="center">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/scanhuadongview"
+                android:layout_width="520px"
+                android:layout_height="260px"
+                android:layout_marginTop="@dimen/commit_toplayout_margin"
+                android:background="@mipmap/new_shuakazhifu_02_img">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/commit_toplayout_leftmargin"
+                    android:layout_marginTop="30px"
+                    android:text="*支持所有银联标准卡"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:id="@+id/commit_bankName_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="招商银行"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <TextView
+                    android:id="@+id/commit_cardNum_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25px"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <include
+            layout="@layout/zhuye_henline"
+            android:layout_width="match_parent"
+            android:layout_height="1px">
+        </include>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="交易类型"
+                        android:textSize="@dimen/all_textsize" />
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px">
+
+                    </include>
+
+                    <TextView
+                        android:id="@+id/commit_type_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/all_textsize" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:id="@+id/commit_money_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/commit_toplayout_leftmargin"
+                        android:text=""
+                        android:textSize="@dimen/commit_moneytextsize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/commit_money_tv"
+                        android:layout_alignBottom="@+id/commit_money_tv"
+                        android:layout_toEndOf="@+id/commit_money_tv"
+                        android:layout_toRightOf="@+id/commit_money_tv"
+                        android:text="元" />
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="手机号"
+                        android:textSize="@dimen/all_textsize" />
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px">
+
+                    </include>
+
+                    <TextView
+                        android:id="@+id/commit_userPhoneNum_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="@dimen/all_textsize" />
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+            <include
+                layout="@layout/zhuye_henline"
+                android:layout_width="match_parent"
+                android:layout_height="1px">
+
+            </include>
+
+
+
+            //输入密码界面
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/all_edittext_h"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:inputType="numberPassword"
+                    android:background="@null"
+                    android:textColorHint="@color/text_color"
+                    android:maxLength="6"
+                    android:gravity="center"
+                    android:hint="输入银行卡密码"/>
+                
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@mipmap/hengxian_icon"
+                    android:layout_alignParentBottom="true">
+
+                </View>
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+
+            <ImageView
+                android:id="@+id/commit_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/commit_left_image"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/commit_button_margin"
+                android:layout_marginStart="@dimen/commit_button_margin" />
+
+
+            <Button
+                android:id="@+id/commit_but"
+                android:layout_width="280px"
+                android:layout_height="90px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/commit_button_margin"
+                android:background="@mipmap/commit_but_bg"
+                android:text="提  交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_maxtextsize" />
+
+
+
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressbar_commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#FFFFFFFF"
+            android:padding="@dimen/login_pro_paddin" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</RelativeLayout>

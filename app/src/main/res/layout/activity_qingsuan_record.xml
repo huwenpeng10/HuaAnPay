@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.RecordActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </com.example.mrxu.myviews.EleMentTitle>
+        
+        
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/navigation_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_below="@+id/title_bar"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:layout_centerVertical="true"
+                android:text="清算金额"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="账户余额"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_color"
+                android:layout_centerVertical="true"
+                android:text="日期"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="@mipmap/hengxian_icon"
+                android:layout_alignParentBottom="true">
+
+            </View>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+        <ProgressBar
+            android:id="@+id/qinsuan_record_pro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/login_pro_paddin"
+            android:visibility="gone"
+            android:layout_below="@+id/navigation_bar_layout"/>
+
+        <com.itheima.pulltorefreshlib.PullToRefreshListView
+            android:id="@+id/qinsuan_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navigation_bar_layout">
+
+
+        </com.itheima.pulltorefreshlib.PullToRefreshListView>
+
+
+
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+</RelativeLayout>

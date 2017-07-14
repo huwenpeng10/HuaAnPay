@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+
+        <item name="android:paddingLeft">20px</item>
+
+        <item name="android:paddingRight">80px</item>
+
+        <item name="android:paddingTop">8px</item>
+
+        <item name="android:paddingBottom">8px</item>
+
+    </style>
+
+    <style name="SwitchButtonStyleMD" parent="SwitchButtonMD">
+
+        <item name="android:paddingLeft">20px</item>
+
+        <item name="android:paddingRight">20px</item>
+
+        <item name="android:paddingTop">8px</item>
+
+        <item name="android:paddingBottom">8px</item>
+
+    </style>
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/show</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/hiden</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+     
+
+    <style name="myDialog" parent="android:style/Theme.Dialog">
+        <!--背景色和透明度-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="myanim" parent="android:Animation.Dialog">
+        <!--背景色和透明度-->
+        <item name="android:windowEnterAnimation">@animator/mydialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@animator/mydialog_exit_anim</item>
+    </style>
+
+    <style name="netconnections_anim">
+        <!--背景色和透明度-->
+        <item name="android:windowEnterAnimation">@animator/net_connections_show</item>
+        <item name="android:windowExitAnimation">@animator/net_connections_hide</item>
+    </style>
+
+    <style name="login_edittext_style">
+        <!--背景色和透明度-->
+        <item name="android:layout_width">600px</item>
+        <item name="android:layout_height">100px</item>
+        <item name="android:background">@mipmap/inputtext_kuang</item>
+        <item name="android:paddingLeft">@dimen/edittext_margin</item>
+        <item name="android:drawablePadding">@dimen/edittext_drawablePadding</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="edittext_pass_style">
+        <!--背景色和透明度-->
+        <item name="android:layout_width">600px</item>
+        <item name="android:layout_height">100px</item>
+        <item name="android:background">@mipmap/inputtext_kuang</item>
+        <item name="android:paddingLeft">@dimen/edittext_margin</item>
+        <item name="android:drawablePadding">@dimen/edittext_drawablePadding</item>
+        <item name="android:drawableLeft">@mipmap/new_denglu_yonghu_icon</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <style name="tramsaction_text_left_style">
+        <!--背景色和透明度-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">60px</item>
+        <item name="android:textSize">@dimen/all_textsize</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="tramsaction_text_right_style">
+        <!--背景色和透明度-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">50px</item>
+        <item name="android:textSize">@dimen/all_textsize</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+</resources>

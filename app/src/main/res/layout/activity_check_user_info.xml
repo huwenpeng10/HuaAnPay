@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.CheckUserInfoActivity">
+
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_bar">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20px">
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户名称"
+                        android:textColor="@color/text_color333333"
+                        android:textSize="@dimen/all_maxtextsize"/>
+
+                    <TextView
+                        android:id="@+id/check_userName_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/text_color333333"
+                        android:textSize="@dimen/all_maxtextsize"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+                <include
+                    layout="@layout/zhuye_henline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px">
+
+                </include>
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手机号"
+                        android:textColor="@color/text_color333333"
+                        android:textSize="@dimen/all_maxtextsize"/>
+
+                    <TextView
+                        android:id="@+id/checkuser_phonenumber_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/text_color333333"
+                        android:textSize="@dimen/all_maxtextsize"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                <include
+                    layout="@layout/zhuye_henline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"></include>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/checkuser_cardid_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/all_edittext_h"
+                        android:background="@null"
+                        android:digits="0123456789*x"
+                        android:drawableBottom="@mipmap/hengxian_icon"
+                        android:hint="请输入身份证号"
+                        android:inputType="text"
+                        android:maxLength="18"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/input_kuang_hint_color"
+                        android:textSize="@dimen/all_maxtextsize"
+                        android:layout_toLeftOf="@+id/erro1_icon"
+                        android:layout_toStartOf="@+id/erro1_icon" />
+
+                    <ImageView
+                        android:id="@+id/erro1_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/new_cuowutishi_img"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/checkuser_bankcardnumber_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/all_edittext_h"
+                        android:background="@null"
+                        android:digits="0123456789"
+                        android:drawableBottom="@mipmap/hengxian_icon"
+                        android:hint="请输入绑定银行卡号"
+                        android:inputType="number"
+                        android:maxLength="19"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/input_kuang_hint_color"
+                        android:textSize="@dimen/all_maxtextsize"
+                        android:layout_toLeftOf="@+id/erro2_icon"
+                        android:layout_toStartOf="@+id/erro2_icon" />
+
+
+                    <ImageView
+                        android:id="@+id/erro2_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/new_cuowutishi_img"/>
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+                <Button
+                    android:id="@+id/checkuser_nextbut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_button_login"
+                    android:text="下一步"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/all_maxtextsize"
+                    android:layout_marginTop="40px"
+                    />
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <ProgressBar
+                android:id="@+id/checkuser_pro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/login_pro_paddin"
+                android:visibility="gone"
+                android:background="@color/white"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+</RelativeLayout>

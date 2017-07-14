@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFFFF">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:descendantFocusability="blocksDescendants">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="20px"
+        android:layout_below="@+id/with_counterfee_tv"
+        android:background="#FFFFFFFF"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/with_counterfee_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:text="提现收取手续费：0.07元"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/all_textsize" />
+
+
+        <TextView
+            android:id="@+id/withitem_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="200元"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/all_maxtextsize" />
+
+        <TextView
+            android:id="@+id/withitem_state_tv"
+            android:layout_width="150px"
+            android:layout_height="80px"
+            android:layout_marginRight="20px"
+            android:gravity="center"
+            android:text="+可提现"
+            android:background="@mipmap/with_day_but"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_textsize"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20px"
+            android:gravity="center"
+            android:text="日期："
+            android:textColor="@color/text_color"
+            android:id="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/withitem_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:gravity="center"
+            android:text="2017-06-19"
+            android:textColor="@color/text_color"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4" />
+
+
+  <!--      <View
+            android:background="#FFcccccc"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            ></View>-->
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

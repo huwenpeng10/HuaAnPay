@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="company_profile">华安支付科技有限公司成立于2004年11月19日，注册资金1亿元，隶属于深圳市华安科技股份有限公司，深圳前海注册，覆盖全国，放眼世界.是国内领先的创新型第三方移动支付品牌，是专业从事电子金融专业服务的公司，性质为合资经营企业，组织形式为股份有限公司。是集移动金融终端产品的研发、生产、销售、商务平台对接、金融平台清算、金融业务咨询等，以及投资、担保，培训，传媒等为一体的现代化综合性金融服务业运营商，产业涉及金融行业多个领域，业务范围覆盖全国。公司依托专业化的管理团队、科学化的经营模式、先进的科技创新理念，将其逐步打造成为国内一流的专业化、规范化、系统化、标准化的综合性金融服务运营企业;致力于金融创新，积极参与银行卡受理环境建设，以数字货币为业务发展核心，依托金融系统清算平台，贴近企业的业务运作和人们生活的各个方面，提供全方位的电子化金融服务环境，服务基本涵盖除现金及线上支付以外的所有支付领域;为国内持卡客户创造安全、便捷的移动支付服务，带动国内金融行业的蓬勃发展，为社会大众提供便利。致力成为国内最具专业的电子金融服务商。</string>
+    <string name="company_name">深圳华安支付科技有限公司</string>
+    <string name="company_address">深圳市宝安三区中粮地产大厦2201&#8212;2202</string>
+    <string name="company_area_code">0755</string>
+    <string name="company_phone1">33561379</string>
+    <string name="company_phone2">36926196</string>
+    <string name="company_phone3">33561306</string>
+    <string name="company_postcode">518101</string>
+    <string name="company_fax">29977360</string>
+
+</resources>

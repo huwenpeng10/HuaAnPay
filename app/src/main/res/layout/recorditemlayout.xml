@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/autoLinearLayout2">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:paddingRight="@dimen/record_item_margin">
+
+
+            <TextView
+                android:id="@+id/item_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/new_xiaoxi_shoukuan_icon"
+                android:drawablePadding="@dimen/record_item_dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/record_item_margin"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/all_maxtextsize" />
+
+            <TextView
+                android:id="@+id/item_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px">
+
+
+            <TextView
+                android:id="@+id/money_item_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/item_textsize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/money_item_tv"
+                android:text="元"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/all_maxtextsize" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:paddingLeft="@dimen/record_item_dp"
+            android:paddingRight="@dimen/record_item_dp">
+
+            <include
+                layout="@layout/zhuye_henline"
+                android:layout_width="match_parent"
+                android:layout_height="1px">
+
+            </include>
+
+
+            <TextView
+                android:id="@+id/item_recordnumber_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/all_textsize" />
+
+
+            <TextView
+                android:id="@+id/item_datetime_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/all_textsize" />
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+    <View
+        layout="@layout/zhuye_henline"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#b4b4b4"
+        android:layout_below="@+id/autoLinearLayout2"></View>
+
+
+
+
+
+</RelativeLayout>

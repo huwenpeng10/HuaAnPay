@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400px">
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/with_inputmoney_bottom_layout"
+                android:orientation="vertical">
+
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/popwindow_dis_iv"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20px"
+                        android:background="@mipmap/pay_pass_cha"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*请输入支付密码"
+                        android:gravity="center"
+                        android:textColor="@color/text_color"
+                        android:padding="20px"
+                        android:textSize="@dimen/all_maxtextsize"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:background="@mipmap/hengxian_icon">
+
+                </View>
+
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <com.example.mrxu.myviews.PwdEditText
+                        android:id="@+id/with_password_ed"
+                        android:layout_width="550px"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+                        <TextView
+                            android:id="@+id/popwindow_forgot_pass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="忘记密码?"
+                            android:layout_marginTop="20px"
+                            android:textColor="@color/text_bluecolor"
+                            android:layout_below="@+id/with_password_ed"
+                            android:layout_alignRight="@+id/with_password_ed"
+                            android:layout_alignEnd="@+id/with_password_ed" />
+
+
+                </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+</RelativeLayout>

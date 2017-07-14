@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:paddingRight="20px"
+            android:paddingLeft="20px">
+
+            <TextView
+                android:id="@+id/qinsuanItem_Money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/all_textsize" />
+
+            <TextView
+                android:id="@+id/qinsuanItem_Hou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textColor="@color/qiandai_shouyi"
+                android:textSize="@dimen/all_maxtextsize" />
+
+
+            <TextView
+                android:id="@+id/qinsaunItem_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/all_textsize" />
+
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

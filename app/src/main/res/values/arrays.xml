@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="number_array">
+        <item name="蓝牙Qpos">蓝牙Qpos</item>
+        <item name="新大陆">新大陆</item>
+    </string-array>
+
+</resources>

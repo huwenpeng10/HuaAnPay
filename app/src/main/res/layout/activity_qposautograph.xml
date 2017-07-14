@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.QPOSAutographActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/auto_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:layout_below="@+id/title_bar">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/autoRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_alignParentTop="true"
+                android:background="@mipmap/shuakazhifu_bg">
+
+
+                <com.example.mrxu.myviews.ScanHuaDongView
+                    android:id="@+id/scanhuadongview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                </com.example.mrxu.myviews.ScanHuaDongView>
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/Tishi_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/autoRelativeLayout"
+                android:background="#b5d4ff"
+                android:padding="@dimen/huadongview_textmargin">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/con_qpos0"
+                    android:textSize="@dimen/all_maxtextsize" />
+
+                <TextView
+                    android:id="@+id/countDown_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text_color"
+                    android:text=""
+                    android:textSize="@dimen/all_maxtextsize" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_above="@+id/bt_again"
+                android:layout_below="@+id/Tishi_layout"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/huadongview_textmargin">
+
+
+                <TextView
+                    android:id="@+id/shuaka_tishi_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/huadongview_textmargin"
+                    android:text="@string/swipe_tips1"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:id="@+id/shuaka_tishi_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/huadongview_textmargin"
+                    android:text="@string/swipe_tips2"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:id="@+id/shuaka_tishi_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/huadongview_textmargin"
+                    android:text="@string/swipe_tips3"
+                    android:textSize="@dimen/all_textsize" />
+
+                <TextView
+                    android:id="@+id/shuaka_tishi_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/huadongview_textmargin"
+                    android:text=""
+                    android:textSize="@dimen/all_textsize" />
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+            <Button
+                android:id="@+id/bt_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/huadongview_btnmarginbootm"
+                android:layout_marginLeft="@dimen/huadongview_btnmargin"
+                android:layout_marginRight="@dimen/huadongview_btnmargin"
+                android:background="@drawable/select_button_login"
+                android:text="点击此处重新连接"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_maxtextsize"
+                android:visibility="gone" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</RelativeLayout>

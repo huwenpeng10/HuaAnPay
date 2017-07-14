@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.PassWordManageActivity">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.example.mrxu.myviews.EleMentTitle>
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:padding="20px">
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/set_pay_pass_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_item_h">
+
+            <include
+                layout="@layout/zhuye_henline"
+                android:layout_width="match_parent"
+                android:layout_height="3px">
+
+            </include>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20px"
+                android:drawableRight="@mipmap/new_you_jiantou_icon"
+                android:text="支付密码修改"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/user_textsize" />
+
+            <include
+                layout="@layout/zhuye_henline"
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:layout_alignParentBottom="true">
+
+            </include>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/set_login_pass_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_item_h"
+            android:layout_below="@+id/set_pay_pass_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20px"
+                android:drawableRight="@mipmap/new_you_jiantou_icon"
+                android:text="登录密码修改"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/user_textsize" />
+
+            <include
+                layout="@layout/zhuye_henline"
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:layout_alignParentBottom="true">
+
+            </include>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</RelativeLayout>

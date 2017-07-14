@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.main.BlueToothConnectActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <com.example.mrxu.myviews.EleMentTitle
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.mrxu.myviews.EleMentTitle>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:paddingLeft="@dimen/bluetooh_margin"
+            android:paddingRight="@dimen/bluetooh_margin">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/lanya_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="@dimen/bluetooh_margin"
+                android:paddingTop="@dimen/bluetooh_margin">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:drawableLeft="@mipmap/new_sheibei_lanya_icon"
+                    android:drawablePadding="10px"
+                    android:gravity="center_vertical"
+                    android:text="蓝牙"
+                    android:textSize="@dimen/all_textsize" />
+
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/bluetooth_switchview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:padding="10px"
+                    app:kswBackDrawable="@drawable/miui_back_drawable"
+                    app:kswBackMeasureRatio="2"
+                    app:kswThumbDrawable="@drawable/miui_thumb_drawable"
+                    app:kswThumbHeight="34px"
+                    app:kswThumbWidth="34px" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <include
+
+                android:id="@+id/bluetooth_line"
+                layout="@layout/zhuye_henline"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/lanya_layout" />
+
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/shebei_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/bluetooth_line"
+                android:layout_above="@+id/search_but">
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+
+
+                    <TextView
+                        android:id="@+id/already_matched_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:gravity="center"
+                        android:text="已配对列表"
+                        android:background="#afd1ff"
+                        android:textSize="@dimen/all_maxtextsize" />
+
+                    <include
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+
+                    //已配对列表
+
+                    <ScrollView
+                        android:id="@+id/already_matched_listScroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:id="@+id/already_matched_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                    </ScrollView>
+
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:id="@+id/already_matched_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="配对列表暂无设备"
+                            android:textColor="#FFcccccc"
+                            android:textSize="@dimen/all_maxtextsize" />
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+                <include
+                    layout="@layout/zhuye_henline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px" />
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:background="#afd1ff">
+
+                        <TextView
+                            android:id="@+id/available_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="搜索列表"
+                            android:textSize="@dimen/all_maxtextsize" />
+
+
+
+
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <include
+
+                        layout="@layout/zhuye_henline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px" />
+                    //未配对列表
+
+                    <ProgressBar
+                        android:id="@+id/bluetooth_pro"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:background="@null"
+                        android:padding="20px"
+                        android:visibility="gone" />
+
+                    <ScrollView
+                        android:id="@+id/available_listScroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:visibility="gone">
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:id="@+id/available_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                    </ScrollView>
+
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:id="@+id/available_matched_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="未搜索到设备"
+                            android:textColor="#FFcccccc"
+                            android:textSize="@dimen/all_maxtextsize" />
+
+
+                        <include
+                            layout="@layout/zhuye_henline"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignParentBottom="true" />
+
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <Button
+                android:id="@+id/search_but"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="150px"
+                android:layout_marginTop="50px"
+                android:background="@drawable/select_button_login"
+                android:text="搜索设备"
+                android:textColor="@color/white"
+                android:textSize="@dimen/all_textsize" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>

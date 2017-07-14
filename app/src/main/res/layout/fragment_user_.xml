@@ -1,0 +1,187 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrxu.fragment.User_Fragment">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/userFragment_topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350px"
+            android:background="@color/titlebar_color">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/user_icon_tv">
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/user_icon_tv"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/new_yonghu_img"
+                android:drawableBottom="@mipmap/new_zhanghuxinxi_renzheng_img" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/userFragment_topLayout"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/textview_margin"
+            android:paddingRight="@dimen/textview_margin"
+            android:paddingTop="25px">
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/user_nametext_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/user_nametext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/new_zhanghuxinxi_xingming_icon"
+                    android:drawablePadding="@dimen/textview_drawablePadding"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/user_textcolor"
+                    android:textSize="@dimen/user_textsize" />
+
+
+                <TextView
+                    android:id="@+id/user_account_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/user_textsize"
+                    android:textColor="@color/user_textcolor" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/user_linecolor"></View>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/user_transaction_record_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/user_transaction_recordtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/new_zhanghuxinxi_huaan_icon"
+                    android:drawablePadding="@dimen/textview_drawablePadding"
+                    android:gravity="center_vertical"
+                    android:text="账单记录"
+                    android:textColor="@color/user_textcolor"
+                    android:textSize="@dimen/user_textsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/new_zhanghuxinxi_jiantou_icon" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/user_linecolor"></View>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/user_business_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/new_zhanghuxinxi_yewu_icon"
+                    android:drawablePadding="@dimen/textview_drawablePadding"
+                    android:gravity="center_vertical"
+                    android:text="业务开通"
+                    android:textColor="@color/user_textcolor"
+                    android:textSize="@dimen/user_textsize" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/new_zhanghuxinxi_jiantou_icon" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/user_linecolor"></View>
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/user_setlayout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/new_zhanghuxinxi_shezhi_icon"
+                    android:drawablePadding="@dimen/textview_drawablePadding"
+                    android:gravity="center_vertical"
+                    android:text="设置"
+                    android:textColor="@color/user_textcolor"
+                    android:textSize="@dimen/user_textsize" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/new_zhanghuxinxi_jiantou_icon"
+                    android:gravity="center_vertical" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/user_linecolor"></View>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+</FrameLayout>
