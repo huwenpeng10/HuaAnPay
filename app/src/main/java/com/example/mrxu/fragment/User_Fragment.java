@@ -152,7 +152,7 @@ public class User_Fragment extends BaseFragment {
                         startAuthTipActivity();
                     }
                     break;
-                case R.id.user_business_layout:
+                case R.id.user_business_layout://业务开通
 
 
                     if(isAuthTip){

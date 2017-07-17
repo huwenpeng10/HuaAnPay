@@ -214,19 +214,19 @@ public class WalletActivity extends BaseActivity implements OnRefreshListener2 {
                         R.animator.push_right_in);
 
                 break;
-            case R.id.wallet_replenishing_tv:
+            case R.id.wallet_replenishing_tv://充值
                 Intent reintent = new Intent(this, ReplenishingActivity.class);
                 startActivity(reintent);
                 overridePendingTransition(R.animator.push_left_in,
                         R.animator.push_left_out);
                 break;
-            case R.id.wallet_withdrawals_tv:
+            case R.id.wallet_withdrawals_tv://提现
                 Intent wiintent = new Intent(this, WithdrawalsActivity.class);
                 startActivityForResult(wiintent, FRESULT);
                 overridePendingTransition(R.animator.push_left_in,
                         R.animator.push_left_out);
                 break;
-            case R.id.right_Tv:
+            case R.id.right_Tv://清算记录
                 Intent qinsuanintent = new Intent(this, QingSuanRecordActivity.class);
                 startActivity(qinsuanintent);
                 overridePendingTransition(R.animator.push_left_in,

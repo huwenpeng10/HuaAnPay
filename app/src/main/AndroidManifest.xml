@@ -82,51 +82,51 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.mrxu.main.AuthenticationActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" /><!-- 实名认证完善用户信息页面-->
         <activity
             android:name="com.example.mrxu.main.ReplenishingActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" /><!-- 刷卡支付-->
         <activity
             android:name="com.example.mrxu.main.BlueToothConnectActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" /><!-- 蓝牙连接-->
         <activity
             android:name="com.example.mrxu.main.MPOSConnectActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" /><!--Mpos连接 -->
         <activity
             android:name="com.example.mrxu.main.QPOSAutographActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" /><!-- pos刷卡页面-->
         <activity
             android:name="com.example.mrxu.main.QPOSCommitActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.example.mrxu.main.FristSetPayPassActivity" />
+            android:screenOrientation="portrait" /><!-- pos刷卡提交页面-->
+        <activity android:name="com.example.mrxu.main.FristSetPayPassActivity" /><!--支付密码设置-->
         <activity
             android:name="com.example.mrxu.main.TransactionVoucherActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" /><!-- 电子小票页面-->
         <activity
             android:name="com.example.mrxu.main.SignatureActivity"
-            android:screenOrientation="landscape" />
-        <activity android:name="com.example.mrxu.main.BalanceInquiryActivity" />
-        <activity android:name="com.example.mrxu.main.MPOSAutographActivity" />
-        <activity android:name="com.example.mrxu.main.MPOSCommitActivity" />
-        <activity android:name="com.example.mrxu.main.AuthenticationPhotoActivity" />
-        <activity android:name="com.example.mrxu.main.RecordActivity" />
-        <activity android:name="com.example.mrxu.main.WalletActivity" />
-        <activity android:name="com.example.mrxu.main.QingSuanRecordActivity" />
-        <activity android:name="com.example.mrxu.main.BusinessActivity" />
-        <activity android:name="com.example.mrxu.main.UrgentWithdrawalsActivity" />
+            android:screenOrientation="landscape" /><!-- 签名页面-->
+        <activity android:name="com.example.mrxu.main.BalanceInquiryActivity" /><!-- 余额页面-->
+        <activity android:name="com.example.mrxu.main.MPOSAutographActivity" /><!-- MPOSC刷卡页面-->
+        <activity android:name="com.example.mrxu.main.MPOSCommitActivity" /><!-- MPOSC提交页面-->
+        <activity android:name="com.example.mrxu.main.AuthenticationPhotoActivity" /><!-- 实名认证页面-->
+        <activity android:name="com.example.mrxu.main.RecordActivity" /><!--账单记录-->
+        <activity android:name="com.example.mrxu.main.WalletActivity" /><!--收益-->
+        <activity android:name="com.example.mrxu.main.QingSuanRecordActivity" /><!-- 清算账单页面-->
+        <activity android:name="com.example.mrxu.main.BusinessActivity" /><!-- 业务开通-->
+        <activity android:name="com.example.mrxu.main.UrgentWithdrawalsActivity" /><!-- 加急体现界面-->
         <activity android:name="com.example.mrxu.main.WithdrawalsActivity"
-                  android:windowSoftInputMode="stateHidden|stateUnchanged" />
-        <activity android:name="com.example.mrxu.main.WithdrawalsRecordActivity" />
-        <activity android:name="com.example.mrxu.main.SetingsActivity" />
-        <activity android:name="com.example.mrxu.main.AboutusActivity" />
-        <activity android:name="com.example.mrxu.main.PassWordManageActivity" />
-        <activity android:name="com.example.mrxu.main.ResetLoginPasswordActivity" />
-        <activity android:name="com.example.mrxu.main.PhoneReplenishingActivity" />
-        <activity android:name="com.example.mrxu.main.PhoneReplenishDetailActivity" />
-        <activity android:name="com.example.mrxu.main.RegisterActivity" />
-        <activity android:name="com.example.mrxu.main.CheckUserInfoActivity" />
-        <activity android:name="com.example.mrxu.main.PhoneCheckUserActivity" />
-        <activity android:name="com.example.mrxu.main.ResetPayPasswordActivity"></activity>
+                  android:windowSoftInputMode="stateHidden|stateUnchanged" /><!-- tn体现页面-->
+        <activity android:name="com.example.mrxu.main.WithdrawalsRecordActivity" /><!-- 体现记录页面-->
+        <activity android:name="com.example.mrxu.main.SetingsActivity" /><!-- 设置页面-->
+        <activity android:name="com.example.mrxu.main.AboutusActivity" /><!-- 关于我们-->
+        <activity android:name="com.example.mrxu.main.PassWordManageActivity" /><!-- 修改密码-->
+        <activity android:name="com.example.mrxu.main.ResetLoginPasswordActivity" /><!-- 修改登录密码-->
+        <activity android:name="com.example.mrxu.main.PhoneReplenishingActivity" /><!-- 手机充值-->
+        <activity android:name="com.example.mrxu.main.PhoneReplenishDetailActivity" /><!-- 手机充值详情页面-->
+        <activity android:name="com.example.mrxu.main.RegisterActivity" /><!-- 注册页面-->
+        <activity android:name="com.example.mrxu.main.CheckUserInfoActivity" /><!-- 用户验证页面-->
+        <activity android:name="com.example.mrxu.main.PhoneCheckUserActivity" /><!-- 获取验证码页面-->
+        <activity android:name="com.example.mrxu.main.ResetPayPasswordActivity"></activity><!-- 修改支付密码-->
     </application>
 
 </manifest>

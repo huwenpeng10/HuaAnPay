@@ -22,7 +22,7 @@ public class PhoneCheckout {
 	public static final boolean isMobileNumber(String phoneNumber) {
 		return Pattern
 				.compile(
-						"^((13[0-9])|(14[5,7])|(15[^4,\\D])|(170)|(18[0-9]))\\d{8}$")
+						"^((13[0-9])|(14[5,7])|(15[^4,\\D])|(17[0,6])|(18[0-9]))\\d{8}$")
 				.matcher(phoneNumber).matches();
 	}
 }

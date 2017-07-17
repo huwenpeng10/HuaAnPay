@@ -138,7 +138,7 @@ public class UrgentWithdrawalsActivity extends BaseActivity {
         }
     }
 
-    private void withdrawals(){
+    private void withdrawals(){//加急提现
         ungentWithdrawPro.setVisibility(View.VISIBLE);
         try {
             new TcpRequest(Construction.HOST, Construction.PORT)
