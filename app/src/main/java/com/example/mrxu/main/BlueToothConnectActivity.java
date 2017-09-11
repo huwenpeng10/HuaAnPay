@@ -33,8 +33,6 @@ import butterknife.ButterKnife;
 
 import static com.example.merxu.mypractice.R.id.already_matched_image_layout;
 
-;
-
 public class BlueToothConnectActivity extends BaseActivity implements ZxbListener, CompoundButton.OnCheckedChangeListener {
 
     @BindView(R.id.left_Imagemage)
@@ -194,8 +192,7 @@ public class BlueToothConnectActivity extends BaseActivity implements ZxbListene
      */
     private void addAlready_matched_list(final BluetoothDevice bluetoothDevice) {
 
-        View view = getLayoutInflater().inflate(R.layout.layout_bluedevice,
-                null);
+        View view = getLayoutInflater().inflate(R.layout.layout_bluedevice,null);
         TextView textView = (TextView) view.findViewById(R.id.tv_device_name);
         textView.setText(bluetoothDevice.getName());
         view.setOnClickListener(new View.OnClickListener() {
@@ -224,8 +221,7 @@ public class BlueToothConnectActivity extends BaseActivity implements ZxbListene
      * 添加一个蓝牙设备（view）加入搜索到的列表
      */
     private void addAvailable_list(final BluetoothDevice bluetoothDevice) {
-        View view = getLayoutInflater().inflate(R.layout.layout_bluedevice,
-                null);
+        View view = getLayoutInflater().inflate(R.layout.layout_bluedevice, null);
         final TextView nameTv = (TextView) view
                 .findViewById(R.id.tv_device_name);
         nameTv.setText(bluetoothDevice.getName());
@@ -593,8 +589,7 @@ public class BlueToothConnectActivity extends BaseActivity implements ZxbListene
 
     @Override
     public void onError(int i) {
-        MainUtils
-                .showToast(this, "掌芯宝返回错误码：" + i);
+        MainUtils.showToast(this, "掌芯宝返回错误码：" + i);
     }
 
 

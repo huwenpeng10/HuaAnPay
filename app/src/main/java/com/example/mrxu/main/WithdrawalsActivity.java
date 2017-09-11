@@ -108,9 +108,10 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
     private String itemDate;
     private int istype;
     private PopupWindow InputMoneywindow;
+    private String copyconversionMoney;
     private String conversionMoney;
     private String inputStr;
-    private int popwindowType;
+//    private int popwindowType;
     private ImageView popwindowDisIv;
     private TextView popwindowForgotPass;
 
@@ -176,13 +177,13 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
     }
 
     //日提现
-    private void dayWithDrawals(String date , String password) {
-        withdrawalsPro.setVisibility(View.VISIBLE);
+    private void dayWithDrawals(String date /*, String password*/) {
+//        withdrawalsPro.setVisibility(View.VISIBLE);
         istype = 2;
         try {
             new TcpRequest(Construction.HOST, Construction.PORT)
                     .request(new CashWithdrawal(
-                            WithdrawalsActivity.this, date ,password).toString());
+                            WithdrawalsActivity.this, date /*,password*/).toString());
         } catch (Exception e) {
             // TODO Auto-generated catch block
             MainUtils.showToast(getApplicationContext(), "异常");
@@ -191,15 +192,18 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
     }
 
     //总资产提现
-    private void totalAssetsWithDrawals(String money , String password) {
+    private void totalAssetsWithDrawals(String money/* , String password*/) {
         withdrawalsPro.setVisibility(View.VISIBLE);
+
         istype = 3;
         try {
             new TcpRequest(Construction.HOST, Construction.PORT)
                     .request(new AccountWithdrawTn(
-                            WithdrawalsActivity.this, money ,password).toString());
+                            WithdrawalsActivity.this, money/* ,password*/).toString());
         } catch (Exception e) {
             // TODO: handle exception
+
+            Log.d(TAG, "totalAssetsWithDrawals: ");
         }
     }
 
@@ -247,19 +251,29 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
                     return;
                 }
 
-                popwindowType = 1;
-                showPopwindow();
+//                popwindowType = 1;
+                /*showPopwindow();*/
+
+                copyconversionMoney = conversionMoney;
+                conversionMoney = TagUtils.fill0AtLeft(new BigDecimal(Double.parseDouble(conversionMoney) * 100,
+                        MathContext.DECIMAL32).intValue(), 12);
+
+                Log.d(TAG, "onInputFinish: "+conversionMoney);
+                totalAssetsWithDrawals(conversionMoney);
+//                InputMoneywindow.dismiss();
+
+
                 break;
 
             case R.id.popwindow_dis_iv:
 
-                InputMoneywindow.dismiss();
+//                InputMoneywindow.dismiss();
 
                 break;
             case R.id.popwindow_forgot_pass:
 
 
-                InputMoneywindow.dismiss();
+//                InputMoneywindow.dismiss();
 
                 Intent forgotPassintent =new Intent(this , CheckUserInfoActivity.class);
                 startActivity(forgotPassintent);
@@ -389,7 +403,8 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
                         if (data.get(XmlBuilder.fieldName(39)).equalsIgnoreCase(
                                 "00")
                                 || data.get(XmlBuilder.fieldName(39))
-                                .equalsIgnoreCase("TT")) {
+                                .equalsIgnoreCase("TT")||data.get(XmlBuilder.fieldName(39))
+                                .equalsIgnoreCase("UO")) {
 
                             /**
                              * 日提现成功
@@ -434,7 +449,8 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
                         if (data.get(XmlBuilder.fieldName(39)).equalsIgnoreCase(
                                 "00")
                                 || data.get(XmlBuilder.fieldName(39))
-                                .equalsIgnoreCase("TT")) {
+                                .equalsIgnoreCase("TT")||data.get(XmlBuilder.fieldName(39))
+                                .equalsIgnoreCase("UO")) {
 
                             /**
                              * 总资产提现成功
@@ -451,7 +467,9 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
                                         @Override
                                         public void onYesClick() {
                                             double doubleUserMoney = Double.parseDouble(TradeInfo.getUserMoney());
-                                            double doubleStrConversionMoney = Double.parseDouble(conversionMoney);
+                                            Log.d(TAG, "onYesClick: doubleUserMoney=="+doubleUserMoney);
+                                            double doubleStrConversionMoney = Double.parseDouble(copyconversionMoney);
+                                            Log.d(TAG, "onYesClick: doubleStrConversionMoney=="+doubleStrConversionMoney);
                                             doubleUserMoney = doubleUserMoney - doubleStrConversionMoney;
                                             TradeInfo.setUserMoney(doubleUserMoney + "");
                                             userMoneyTv.setText(doubleUserMoney + "");
@@ -536,17 +554,17 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
     public void onInputFinish(String password) {
 
 
-        if(popwindowType==1){
-
-            conversionMoney = TagUtils.fill0AtLeft(new BigDecimal(Double.parseDouble(conversionMoney) * 100,
-                    MathContext.DECIMAL32).intValue(), 12);
-
-            totalAssetsWithDrawals(conversionMoney ,password);
-            InputMoneywindow.dismiss();
-        }else if(popwindowType == 2){
-
-            dayWithDrawals(itemDate , password);
-        }
+//        if(popwindowType==1){
+//
+//            conversionMoney = TagUtils.fill0AtLeft(new BigDecimal(Double.parseDouble(conversionMoney) * 100,
+//                    MathContext.DECIMAL32).intValue(), 12);
+//
+//            totalAssetsWithDrawals(conversionMoney /*,password*/);
+////            InputMoneywindow.dismiss();
+//        }else if(popwindowType == 2){
+//
+//            dayWithDrawals(itemDate/* , password*/);
+//        }
 
     }
 
@@ -597,8 +615,12 @@ public class WithdrawalsActivity extends BaseActivity implements PwdEditText.OnI
                             @Override
                             public void onYesClick() {
                                 itemDate = arrayList.get(position).getItemDate();
-                                popwindowType = 2;
-                                showPopwindow();
+//                                popwindowType = 2;
+//                                showPopwindow();
+
+
+                                dayWithDrawals(itemDate/* , password*/);
+
                                 commonAppDialog.dismiss();
                             }
                         });

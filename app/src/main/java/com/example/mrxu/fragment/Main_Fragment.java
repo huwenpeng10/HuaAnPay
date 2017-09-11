@@ -24,7 +24,6 @@ import com.example.mrxu.base.BaseFragment;
 import com.example.mrxu.main.AuthenticationActivity;
 import com.example.mrxu.main.BlueToothConnectActivity;
 import com.example.mrxu.main.BusinessActivity;
-import com.example.mrxu.main.FristSetPayPassActivity;
 import com.example.mrxu.main.MPOSConnectActivity;
 import com.example.mrxu.main.PhoneReplenishingActivity;
 import com.example.mrxu.main.ReplenishingActivity;
@@ -389,7 +388,7 @@ public class Main_Fragment extends BaseFragment {
         setKaitongbg();
     }
 
-
+    //用户开通状态
     private void setKaitongbg() {
 
         Log.d(TAG, "setKaitongbg: "+UserInfo.state);
@@ -529,17 +528,17 @@ public class Main_Fragment extends BaseFragment {
                     return;
                 }
 
-                if(UserInfo.getPayPasswordState().equals("01")){
+//                if(UserInfo.getPayPasswordState().equals("01")){
 
                     TradeInfo.setPageState(TradeInfo.PageState.SHOUJICHONGZHI);
                     startActivity(new Intent(getActivity(), PhoneReplenishingActivity.class));
                     getActivity().overridePendingTransition(R.animator.push_zhong_in, R.animator.push_zhong_out);
 
-                }else{
-                    Intent setpaypassword = new Intent(getActivity(), FristSetPayPassActivity.class);
-                    startActivity(setpaypassword);
-                    getActivity().overridePendingTransition(R.animator.push_zhong_in, R.animator.push_zhong_out);
-                }
+//                }else{
+//                    Intent setpaypassword = new Intent(getActivity(), FristSetPayPassActivity.class);
+//                    startActivity(setpaypassword);
+//                    getActivity().overridePendingTransition(R.animator.push_zhong_in, R.animator.push_zhong_out);
+//                }
 
 
                 break;
@@ -550,17 +549,17 @@ public class Main_Fragment extends BaseFragment {
                     return;
                 }
 
-                if(UserInfo.getPayPasswordState().equals("01")){
+//                if(UserInfo.getPayPasswordState().equals("01")){
                     TradeInfo.setPageState(TradeInfo.PageState.QIANDAIBAO);
 
                     Intent qianDaintent = new Intent(getActivity(), WalletActivity.class);
                     startActivity(qianDaintent);
                     getActivity().overridePendingTransition(R.animator.push_zhong_in, R.animator.push_zhong_out);
-                }else{
-                    Intent setpaypassword = new Intent(getActivity(), FristSetPayPassActivity.class);
-                    startActivity(setpaypassword);
-                    getActivity().overridePendingTransition(R.animator.push_zhong_in, R.animator.push_zhong_out);
-                }
+//                }else{
+//                    Intent setpaypassword = new Intent(getActivity(), FristSetPayPassActivity.class);
+//                    startActivity(setpaypassword);
+//                    getActivity().overridePendingTransition(R.animator.push_zhong_in, R.animator.push_zhong_out);
+//                }
 
 
                 break;

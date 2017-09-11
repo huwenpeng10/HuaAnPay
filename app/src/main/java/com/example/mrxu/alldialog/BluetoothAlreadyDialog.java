@@ -18,8 +18,9 @@ import butterknife.ButterKnife;
  */
 
 
-public class BluetoothAlreadyDialog extends Dialog {    @BindView(R.id.title)
-TextView title;
+public class BluetoothAlreadyDialog extends Dialog {
+    @BindView(R.id.title)
+    TextView title;
     @BindView(R.id.message)
     TextView message;
     @BindView(R.id.no)

@@ -28,7 +28,7 @@ import com.example.mrxu.mutils.TcpRequest;
 import com.example.mrxu.mutils.TcpRequest.TcpRequestMessage;
 import com.example.mrxu.mutils.XmlBuilder;
 import com.example.mrxu.mutils.XmlParser;
-import com.github.ybq.android.spinkit.style.ChasingDots;
+import com.github.ybq.android.spinkit.style.Circle;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
@@ -103,8 +103,8 @@ public class AuthenticationPhotoActivity extends BaseActivity implements ImageLo
     public void initView(View view) {
         ButterKnife.bind(this);
 
-        ChasingDots chasingDots = new ChasingDots();
-        chasingDots.setColor(R.color.pro_color);
+        Circle chasingDots = new Circle();
+        chasingDots.setColor(0xFF3798f4);
         progressDialog.setIndeterminateDrawable(chasingDots);
 
         titleBarText.setText("实名认证");
