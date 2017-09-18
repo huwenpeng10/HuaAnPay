@@ -285,7 +285,7 @@ public class Main_Fragment extends BaseFragment {
                 fragmentMainpro.setVisibility(View.GONE);
             }
         });
-
+                                        //收益接口
         if (message.getTextCode().equals("F20017")) {
 
             if (iswellet) {
@@ -316,9 +316,9 @@ public class Main_Fragment extends BaseFragment {
                                         .setScale(2).toPlainString();
 
                                 welletDay = new BigDecimal(
-                                        welletData[4])
-                                        .divide(new BigDecimal(100))
-                                        .setScale(2).toPlainString();
+                                        welletData[4])//  divide()   BigDecimal对象中的值相除，然后返回这个对象。
+                                        .divide(new BigDecimal(100))//setScale(2)表示保留2位小数，默认用四舍五入方式
+                                        .setScale(2).toPlainString();//toPlainString() 类型转换成toPlainString()
 
                                 welletTotal = new BigDecimal(
                                         welletData[3])

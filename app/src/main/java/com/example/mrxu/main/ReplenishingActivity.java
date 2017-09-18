@@ -85,7 +85,7 @@ public class ReplenishingActivity extends BaseActivity implements OnEditorAction
         replUsernameTv.setText(UserInfo.getUserName());
         replBankNameTv.setText(UserInfo.getBankName());
 
-        String cardNo = UserInfo.getBindingCardNo()+"";
+        String cardNo = UserInfo.getBindingCardNo()+"";//银行卡号
         String startNo = cardNo.substring(0, 4);
         String endNo = cardNo.substring(cardNo.length() - 4, cardNo.length());
         replBankNumTv.setText(startNo + "******" + endNo);
@@ -130,7 +130,7 @@ public class ReplenishingActivity extends BaseActivity implements OnEditorAction
                 TradeInfo.setPageState(PageState.SHUAKAZHIFU);
                 startNextActivity();
                 break;
-            case R.id.urgent_withdrawals_but:
+            case R.id.urgent_withdrawals_but://加急体现
 
                 Intent urgentWIntent =new Intent(this,UrgentWithdrawalsActivity.class);
                 startActivity(urgentWIntent);
@@ -151,7 +151,7 @@ public class ReplenishingActivity extends BaseActivity implements OnEditorAction
     private void startNextActivity() {
         money = replMoneydt.getText().toString();
         if (!TextUtils.isEmpty(money)) {
-            if (!money.substring(0, 1).equals(".")) {
+            if (!money.substring(0, 1).equals(".")) {//substring(0, 1) 截取字符串 从0位开始 到1位结束
                 if (Double.parseDouble(money) > 0) {
 
                     if (TradeInfo.getPosName().equals(getString(R.string.Qpos))) {

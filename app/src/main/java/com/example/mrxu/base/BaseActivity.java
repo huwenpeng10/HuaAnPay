@@ -65,17 +65,17 @@ public abstract class BaseActivity extends FragmentActivity implements
             initParms(bundle);
             mContextView = LayoutInflater.from(this)
                     .inflate(bindLayout(), null);
-            if (mAllowFullScreen) {
+            if (mAllowFullScreen) {//是否允许全屏
                 this.getWindow().setFlags(
                         WindowManager.LayoutParams.FLAG_FULLSCREEN,
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
                 requestWindowFeature(Window.FEATURE_NO_TITLE);
             }
-            if (isSetStatusBar) {
+            if (isSetStatusBar) {//是否沉浸状态栏
                 steepStatusBar();
             }
             setContentView(mContextView);
-            if (!isAllowScreenRoate) {
+            if (!isAllowScreenRoate) {// 是否禁止旋转屏幕
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
             } else {
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);

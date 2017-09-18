@@ -312,8 +312,8 @@ public class BlueToothConnectActivity extends BaseActivity implements ZxbListene
                     return;
                 }
                 manager.cancelDiscovery();
-                removeAvailable_list(bluetoothDevice);
-                startDeviceView(bluetoothDevice);
+                removeAvailable_list(bluetoothDevice);//移除一个蓝牙设备（view）搜索到的列表
+                startDeviceView(bluetoothDevice);//页面跳转
                 bluetoothAlreadyDialog.dismiss();
             }
         });
