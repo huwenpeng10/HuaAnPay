@@ -201,7 +201,7 @@ public class TransactionVoucherActivity extends BaseActivity {
 
         timeTv.setText(DateFormat.format("yyyy-MM-dd\tHH:mm:ss", date));
         servicesTv.setText(getString(R.string.services_phone));
-        moneyTv.setText(intent.getStringExtra(KEY_MONER));
+        moneyTv.setText(intent.getStringExtra(KEY_MONER)+"元");
 
     }
 

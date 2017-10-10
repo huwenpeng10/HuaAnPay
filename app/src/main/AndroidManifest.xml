@@ -107,7 +107,7 @@
             android:screenOrientation="landscape" /><!-- 签名页面-->
         <activity android:name="com.example.mrxu.main.BalanceInquiryActivity" /><!-- 余额页面-->
         <activity android:name="com.example.mrxu.main.MPOSAutographActivity" /><!-- MPOSC刷卡页面-->
-        <activity android:name="com.example.mrxu.main.MPOSCommitActivity" /><!-- MPOSC提交页面-->
+        <activity android:name="com.example.mrxu.main.MPOSCommitActivity" /><!-- 刷完卡提交页面-->
         <activity android:name="com.example.mrxu.main.AuthenticationPhotoActivity" /><!-- 实名认证页面-->
         <activity android:name="com.example.mrxu.main.RecordActivity" /><!--账单记录-->
         <activity android:name="com.example.mrxu.main.WalletActivity" /><!--收益-->
