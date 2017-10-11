@@ -14,6 +14,7 @@ public class Function {
 		fs.add(new F(33, "F10002", "刷卡收款"));
 		fs.add(new F(55, "F20027", "话费充值"));
 		fs.add(new F(66, "F20021", "扫码收款"));
+		fs.add(new F(77, "F10007", "账户提现"));
 		fs.add(new F(44, "04", "转账"));
 		fs.add(new F(64, "06", "转账"));
 	}

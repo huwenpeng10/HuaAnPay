@@ -382,7 +382,6 @@ public class RecordActivity extends BaseActivity {
                         getResources().getDrawable(
                                 R.mipmap.new_xiaoxi_shoukuan_icon), null, null,
                         null);
-                holdView.tv_type.setText(tapy);
             } else if (tapy.equals("话费充值")) {
                 holdView.tv_type.setCompoundDrawablesWithIntrinsicBounds(
 
@@ -390,15 +389,21 @@ public class RecordActivity extends BaseActivity {
                                 R.mipmap.new_xiaoxi_huafei_icon), null, null,
                         null);
 
-                holdView.tv_type.setText(tapy);
             } else if (tapy.equals("扫码收款")) {
                 holdView.tv_type.setCompoundDrawablesWithIntrinsicBounds(
 
                         getResources().getDrawable(
                                 R.mipmap.new_xiaoxi_erweima_icon), null, null, null);
 
-                holdView.tv_type.setText(tapy);
+            } else if (tapy.equals("账户提现")) {
+                holdView.tv_type.setCompoundDrawablesWithIntrinsicBounds(
+
+                        getResources().getDrawable(
+                                R.mipmap.new_xiaoxi_tixian_icon), null, null, null);
+
+
             }
+            holdView.tv_type.setText(tapy);
 
             /**
              *

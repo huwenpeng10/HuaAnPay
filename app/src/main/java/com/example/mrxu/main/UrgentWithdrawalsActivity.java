@@ -27,8 +27,6 @@ import com.github.ybq.android.spinkit.style.Circle;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -190,30 +188,36 @@ public class UrgentWithdrawalsActivity extends BaseActivity {
                     txTime=data.get("TxTime");
                     txserialNumber=data.get(XmlBuilder.fieldName(11));
                     txphoneNum=UserInfo.getPhoneNumber()+"";
-                    txcheckCode=data.get(XmlBuilder.fieldName(128));
+//                    txcheckCode=data.get(XmlBuilder.fieldName(128));
 
 
-                    try {
-                        txphoneCheckCode=TagUtils.MAC(
-                                TagUtils.TxCode(10007), txdate,
-                                txTime, txserialNumber,
-                                txphoneNum);
-                    } catch (NoSuchAlgorithmException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        txphoneCheckCode=TagUtils.MAC(
+//                                TagUtils.TxCode(10007), txdate,
+//                                txTime, txserialNumber,
+//                                txphoneNum);
+//                    } catch (NoSuchAlgorithmException e) {
+//                        // TODO Auto-generated catch block
+//                        e.printStackTrace();
+//                    }
 
-                    if(txcheckCode.equals(txphoneCheckCode))
-                    {
-                        new Thread() {
+
+//                    Log.d(TAG, "onEvent: "+txphoneCheckCode+"=="+txcheckCode);
+//
+//                    if(txcheckCode.equals(txphoneCheckCode))
+//                    {
+                        //成功调用
+                        runOnUiThread(new Runnable() {
+                            @Override
                             public void run() {
+
                                 success();
                             }
-                        }.start();
-                    }else
-                    {
-                        MainUtils.showToast(getApplicationContext(), "校验失败");
-                    }
+                        });
+//                    }else
+//                    {
+//                        MainUtils.showToast(getApplicationContext(), "校验失败");
+//                    }
                 }else{
 
                     error(data.get(XmlBuilder.fieldName(124)));
@@ -251,6 +255,7 @@ public class UrgentWithdrawalsActivity extends BaseActivity {
                 errorOkAppDialog =new OkAppDialog(UrgentWithdrawalsActivity.this);
                 errorOkAppDialog.setTitleStr("提示");
                 if(!TextUtils.isEmpty(msg)){
+
                     errorOkAppDialog.setmsgStr(msg);
                 }else{
                     errorOkAppDialog.setmsgStr("异常");
@@ -276,14 +281,13 @@ public class UrgentWithdrawalsActivity extends BaseActivity {
             public void run() {
 
                 successOkAppDialog=new OkAppDialog(UrgentWithdrawalsActivity.this);
-                errorOkAppDialog.setTitleStr("提示");
-                errorOkAppDialog.setmsgStr("已提现全部金额："+new BigDecimal(withdrawAmount)
-                        .divide(new BigDecimal(100)).doubleValue());
-                errorOkAppDialog.setYesOnclickListener("好的",new OkAppDialog.onYesOnclickListener() {
+                successOkAppDialog.setTitleStr("提示");
+                successOkAppDialog.setmsgStr("已提现全部金额："+withdrawAmount+"元");
+                successOkAppDialog.setYesOnclickListener("好的",new OkAppDialog.onYesOnclickListener() {
                     @Override
                     public void onYesClick() {
 
-                        errorOkAppDialog.dismiss();
+                        successOkAppDialog.dismiss();
 
                     }
                 });
